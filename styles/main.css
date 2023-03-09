@@ -1,0 +1,162 @@
+/* .experience-grid {
+    display: flex;
+    justify-content: center;
+} */
+
+/* 
+    Custom font with fallback
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/*
+    CSS variables
+    - navbar spacing to separate navbar and beginning of main content
+*/
+:root {
+    --navbar-spacing: 2em;
+    --background-color: #ffe6cc;
+    --company-desc-sizing: 100px;
+}
+
+html {
+    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--background-color);
+}
+
+h1 {
+    color: #7085c2
+}
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+} */
+
+.main-nav {
+    width: 100%;
+    height: var(--navbar-spacing);
+    position: fixed;
+    display: flex;
+    background-color: var(--background-color);
+    font-size: 1em;
+    justify-content: space-between;
+    top: 0;
+    border-bottom: 1px solid #BBBBBB;
+    padding: 0.75em 0;
+    z-index: 1;
+}
+
+nav a {
+    padding: 0.5em;
+}
+
+.main-page {
+    padding-top: var(--navbar-spacing);
+    background-color: var(--background-color);
+}
+
+/* .navbar-spacing {
+    flex-grow: 1;
+} */
+
+.nav-name {
+    margin-left: 30px;
+}
+.nav-tabs {
+    display: flex;
+    margin-right: 30px;
+    justify-content: space-evenly;
+}
+
+.main-page-header {
+    display: grid;
+    padding-top: 5%;
+    
+}
+
+.introduction-section {
+    display: grid;
+    /* grid-gap: 4px 51px; */
+    grid-template-areas: "left right";
+    /* grid-template-columns: 20vh auto; */
+    grid-gap: 2em;
+    /* align-items: center; */
+    /* width: 70%; */
+    margin: 0 20%;
+}
+
+.introduction-section > picture img {
+    height: 40vh;
+}
+
+.introduction-writing {
+    /* white-space: wrap; */
+    /* overflow: hidden; */
+    animation: animate 2s linear forwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes animate {
+    0% { 
+     opacity: 0.1;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+.experience-grid {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.experience-entry {
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: auto auto;
+    grid-column: narrow;
+    /* row-gap: 2em; */
+    column-gap: 2em;
+    align-items: center;
+}
+
+.experience-grid article {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.experience-entry img {
+    height: 100px;
+    width: var(--company-desc-sizing);   
+}
+
+.company-desc {
+    /* height: 100px; */
+    width: var(--company-desc-sizing);
+    font-size: 0.75em;
+}
+
+#footer {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Contact page */
+.main-page-contact {
+    padding: 5% 5em;
+
+}
+
+main textarea {
+    width: 70%;
+    background-color: var(--background-color);
+}

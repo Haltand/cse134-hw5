@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Custom Dialogs</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <button id="alertbutton" onclick="window.alert_dialog.show();">Alert</button>
+        <dialog id="alert_dialog">
+            Alert pressed!
+            <button onclick="window.alert_dialog.close();">OK</button>
+        </dialog>
+
+        <button id="confirmbutton" onclick="window.confirm_dialog.show();">Confirm</button>
+        <dialog id="confirm_dialog">
+            Do you confirm this?
+            <form method="dialog">
+                <button id="confirm_cancel" onclick="window.confirm_dialog.close();">Cancel</button>
+                <button id="confirm_ok" onclick="window.confirm_dialog.close();">Ok</button>
+            </form>
+        </dialog>
+
+        <button id="promptbutton" onclick="window.prompt_dialog.show()">Prompt</button>
+        <dialog id="prompt_dialog">
+            What is your name?
+            <form method="dialog">
+                <input type="text" id="prompt_name" name="prompt_name">
+                <br>
+                <button id="prompt_cancel" onclick="window.prompt_dialog.close();">Cancel</button>
+                <button id="prompt_ok" onclick="window.prompt_dialog.close();">Ok</button>
+            </form>
+        </dialog>
+        
+        <br>
+        <br>
+        <br>
+        
+        <output id="output_display"></output>
+
+        <script src="/modules/customdialog.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.js" integrity="sha512-TRW4uJEyH03RBYDDP/0Nerf3y1zPCPzmLBq5IwjYtUyPD505Aro7Xh6ELpKmnH3yeKj6MP3meheJMJXB4aN0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</html>
